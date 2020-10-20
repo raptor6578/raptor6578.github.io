@@ -1,0 +1,23 @@
+{
+  "name": "reservia",
+  "version": "1.0.0",
+  "description": "Transformez une maquette en site web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raptor6578/reservia.git"
+  },
+  "author": "DAMM Nicolas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raptor6578/reservia/issues"
+  },
+  "homepage": "https://github.com/raptor6578/reservia#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "fontsource-raleway": "^3.0.9"
+  }
+}
