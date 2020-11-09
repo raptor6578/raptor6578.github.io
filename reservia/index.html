@@ -2,21 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo/Reservia.svg" />
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Reservia : Trouvez votre hébergement pour vos vacances</title>
 </head>
 <body>
-<div class="main-container">
+<main class="main-container">
     <header>
         <a class="header-logo" href="/"><img alt="logo" src="images/logo/Reservia.svg" /></a>
         <nav>
             <ul>
-                <li><a class="nav-active" href="#">Hébergements</a></li>
-                <li><a href="#">Activités</a></li>
+                <li><a class="nav-active" href="#lodging">Hébergements</a></li>
+                <li><a href="#activity">Activités</a></li>
             </ul>
             <ul>
                 <li><a class="nav-register" href="#">S'inscrire</a></li>
@@ -24,7 +23,7 @@
         </nav>
     </header>
     <section class="title">
-        <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p><small>En plein centre ville ou en pleine nature</small></p>
     </section>
     <section class="search">
@@ -81,7 +80,7 @@
         </div>
     </section>
     <div class="items-container">
-        <section class="lodging">
+        <section class="lodging" id="lodging">
             <h2>Hébergement à Marseille</h2>
             <a href="#" class="item-lodging">
                 <div class="img-item-lodging" id="img1-lodging"></div>
@@ -202,7 +201,7 @@
                 </div>
             </a>
         </section>
-        <section class="activity">
+        <section class="activity" id="activity">
             <h2>Activités à Marseille</h2>
             <a href="#" class="item-activity">
                 <div class="img-item-activity" id="img1-activity"></div>
@@ -234,7 +233,7 @@
             </div>
         </section>
     </div>
-</div>
+</main>
 <footer>
     <div class="footer-container">
         <ul>
