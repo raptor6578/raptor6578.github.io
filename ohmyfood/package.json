@@ -1,0 +1,16 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.sass:./css/style.css",
+    "sass-production": "sass  --style compressed ./sass/main.sass:./css/style.css"
+  },
+  "author": "DAMM Nicolas",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "sass": "^1.29.0"
+  }
+}

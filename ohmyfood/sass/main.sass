@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap')
+
+$color_primary: #9356DC
+$color_secondary: #FF79DA
+$color_tertiary: #99E2D0
+
+*
+  margin: 0
+  padding: 0
+
+body
+  font-family: 'Roboto', sans-serif
+
+.spinner
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: white
+  z-index: 1
+  right: 0
+  animation: spinner-hidden 0s ease-in 1s forwards
+  display: flex
+  align-items: center
+  &__content
+    margin: auto
+    text-align: center
+    color: $color_primary
+    font-size: 25px
+    font-family: 'Shrikhand', cursive
+    .loader
+      margin: auto
+      margin-bottom: 30px
+      border: 16px solid $color_primary
+      border-top: 16px solid $color_secondary
+      border-radius: 50%
+      width: 120px
+      height: 120px
+      animation: spinner 1s linear infinite
+
+@keyframes spinner
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes spinner-hidden
+  to
+    visibility: hidden
+
+.header
+  display: flex
+  flex-wrap: wrap
+  a
+    color: black
+  &__back
+    position: absolute
+    left: 20px
+    top: 20px
+  &__logo
+    width: 50%
+    display: block
+    margin-top: 10px
+    margin-left: auto
+    margin-right: auto
+  &__image
+    margin-top: 15px
+    object-fit: cover
+    width: 100%
+    height: 300px
+
+.main-container
+  background-color: #f6f6f6
+  position: relative
+  border-top-left-radius: 50px
+  border-top-right-radius: 50px
+  bottom: 60px
+  margin-bottom: -60px
+  padding: 20px
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    i
+      vertical-align: middle
+  &__underline
+    width: 40px
+    height: 2px
+    margin-bottom: 20px
+    background-color: $color_tertiary
+  h1
+    font-family: 'Shrikhand', cursive
+    font-size: 25px
+  h2
+    font-size: 15px
+    font-weight: normal
+    color: gray
+
+.entree, .plat, .dessert, .validate-order
+  animation-duration: 4s
+  animation-name: fadein
+  animation-fill-mode: backwards
+
+.entree
+  margin-top: 40px
+
+.plat
+  margin-top: 40px
+  animation-delay: 1s
+
+.dessert
+  margin-top: 40px
+  animation-delay: 2s
+
+.validate-order
+  text-align: center
+  margin: 40px
+  animation-delay: 2s
+
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.order-item
+  display: flex
+  justify-content: space-between
+  background-color: white
+  border-radius: 12px
+  margin-bottom: 20px
+  &__info
+    padding: 10px
+    white-space: nowrap
+    color: gray
+    h3
+      color: black
+    &--overflow
+      overflow: hidden
+      text-overflow: ellipsis
+      display: block
+  &__price
+    display: flex
+    align-items: center
+    font-weight: bold
+  &__animation
+    width: 0
+    height: 100%
+    margin-left: 10px
+    background-color: $color_tertiary
+    transition: width 2s
+    display: flex
+    justify-content: center
+    align-items: center
+    border-top-right-radius: 12px
+    border-bottom-right-radius: 12px
+    color: white
+    overflow: hidden
+  &:hover
+    .order-item__animation
+      width: 50px
+      i
+        animation: rotate 2s
+
+@keyframes rotate
+  100%
+    transform: rotate(360deg)
+  0%
+    transform: rotate(190deg)
+
+.explore-food
+  margin-top: 10px
+  height: 300px
+  background-color: #f6f6f6
+  &__title
+    background-color: #eeeeee
+    text-align: center
+    padding: 10px
+    border-top: 3px solid #e5e5e5
+  &__content
+    text-align: center
+    padding: 15px
+    margin-top: 20px
+  p
+    margin-top: 10px
+    font-size: 18px
+  .button-1
+    margin-top: 20px
+
+.button-1
+  background: linear-gradient($color_secondary, $color_primary)
+  padding: 12px 30px 12px 30px
+  border: none
+  border-radius: 20px
+  color: white
+  font-size: 14px
+  text-decoration: none
+  margin-top: 10px
+  display: inline-block
+  &:hover
+    cursor: pointer
+    opacity: 0.9
+    -webkit-box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.15)
+    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.15)
+
+.operation
+  margin-top: 20px
+  padding-left: 15px
+  padding-right: 15px
+  a
+    text-decoration: none
+    color: black
+    display: block
+    background-color: #f6f6f6
+    padding: 20px
+    margin-top: 20px
+    border-radius: 15px
+    font-weight: bold
+    i
+      color: gray
+      margin-left: 20px
+      margin-right: 20px
+
+span.number
+  display: block
+  position: absolute
+  width: 20px
+  height: 20px
+  text-align: center
+  background-color: $color_primary
+  border-radius: 50%
+  color: white
+  margin-left: -27px
+
+.shadow-1
+  -webkit-box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.09)
+  box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.09)
+
+.operation a:hover, footer a:hover
+  color: $color_primary
+
+.food
+  margin-top: 20px
+  background-color: #f6f6f6
+  padding: 15px
+  h2
+    margin-top: 20px
+    margin-bottom: 20px
+  &__item
+    background-color: white
+    border-radius: 15px
+    margin-bottom: 20px
+    display: block
+    text-decoration: none
+    color: black
+    b
+      display: block
+    &:hover
+      box-shadow: none
+      p
+        color: $color_primary
+    &__img
+      border-top-left-radius: 15px
+      border-top-right-radius: 15px
+      background-size: cover
+      background-position: center
+      height: 200px
+      &__news
+        background-color: $color_tertiary
+        padding: 5px 7px 5px 7px
+        color: #2d7362
+        position: relative
+        right: 25px
+        float: right
+        margin-top: 10px
+    &__content
+      padding: 15px
+      display: flex
+      justify-content: space-between
+      &__like
+        padding-top: 10px
+        i
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          display: initial
+          -webkit-text-stroke-width: 1px
+          -webkit-text-stroke-color: black
+          transition: all 2s
+        &:hover
+          i
+            background-color: $color_secondary
+            -webkit-text-stroke-color: $color_secondary
+    &__img1
+      background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg')
+    &__img2
+      background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg')
+    &__img3
+      background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg')
+    &__img4
+      background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg')
+
+
+.fa-heart i:hover
+  background: $color_primary
+
+.footer
+  background-color: #2b2b2b
+  color: lightgray
+  a
+    text-decoration: none
+    color: lightgray
+  ul
+    list-style-type: none
+    padding: 25px
+    margin: 0
+  li
+    margin-bottom: 5px
+  i
+    color: white
+    margin-right: 10px
+  &__logo
+    margin-bottom: 15px
+    font-family: 'Shrikhand', cursive
+
+@media screen and (min-width: 1110px)
+
+  body
+    max-width: 1200px
+    margin: auto
+
+  .header
+    &__back
+      position: initial
+      margin-top: 30px
+      font-size: 30px
+    &__logo
+      width: 30%
+
+  .operation
+    &__items
+      display: flex
+      a
+        margin-right: 20px
+
+  .food
+    &__items
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+    &__item
+      min-width: 500px
+      margin: 20px
+
+
+
+
+
