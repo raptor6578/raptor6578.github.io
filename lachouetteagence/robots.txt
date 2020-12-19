@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://raptor6578.github.io/lachouetteagence/sitemap.xml
