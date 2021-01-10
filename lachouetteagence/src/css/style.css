@@ -699,8 +699,12 @@ p {
 }
 
 .social {
-    max-width: 400px;
-    margin: auto auto auto auto;
+    margin-bottom: 30px;
+}
+
+.social-link span {
+    color: black!important;
+    margin-top: 30px;
 }
 
 h2 {
@@ -1043,4 +1047,12 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+.partenaires {
+    margin-top: 20px;
+    text-align: center;
+}
+.partenaires li {
+    display: inline-block;
+    list-style: none;
 }
